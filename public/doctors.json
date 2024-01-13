@@ -1,0 +1,158 @@
+[
+  {
+    "profile": {
+      "name": "Dr. Ruby Perrin",
+      "image": "https://i.ibb.co/s9Y6YSX/ban2.jpg",
+      "qualifications": "MSDS, BDS (Dental Medicine)",
+      "rating": 4.5,
+      "reviews": 102,
+      "servicesOffered": ["Dental Filling", "Teeth Whitening"]
+    },
+    "aboutMe": {
+      "bio": "Dr. Ruby Perrin is a dental medicine expert with a master’s degree in dental sciences (MSDS) and a bachelor’s degree in dental surgery (BDS) from the American Dental Medical University. She has been practicing dentistry for over 20 years and has a loyal clientele who appreciate her gentle and caring approach. She offers a range of dental services, such as dental filling, teeth whitening, root canal treatment, and cosmetic dentistry. She is also a certified member of the American Dental Association and the International Federation of Dental Hygienists. Dr. Perrin is passionate about improving the oral health and smile of her patients and always keeps herself updated with the latest developments and innovations in the field of dentistry.",
+      "education": [
+        {
+          "university": "American Dental Medical University",
+          "degree": "MSDS",
+          "year": "1995-2001"
+        },
+        {
+          "university": "American Dental Medical University",
+          "degree": "BDS",
+          "year": "1990-1995"
+        }
+      ],
+      "awards": [
+        {
+          "title": "Humanitarian Award",
+          "organization": "International Dental Association",
+          "year": "2018"
+        }
+      ]
+    },
+    "workAndExperience": {
+      "currentEmployment": [
+        {
+          "clinic": "Glowing Smiles Family Dental Clinic",
+          "position": "Senior Dentist",
+          "duration": "2005 - Present"
+        },
+        {
+          "clinic": "Desert Dental Practice",
+          "position": "Consultant Dentist",
+          "duration": "2001 - Present"
+        }
+      ],
+      "services": [
+        { "name": "Tooth Cleaning", "price": "$50" },
+        { "name": "Composite Bonding", "price": "$100" }
+      ]
+    }
+  },
+
+  {
+    "profile": {
+      "name": "Dr. James Lee",
+      "image": "https://i.ibb.co/XSyY4C1/ban3.jpg",
+      "qualifications": "DDS, MSc (Oral Surgery)",
+      "rating": 4.0,
+      "reviews": 86,
+      "servicesOffered": ["Dental Implants", "Wisdom Teeth Removal"]
+    },
+    "aboutMe": {
+      "bio": "",
+      "education": [
+        {
+          "university": "Harvard School of Dental Medicine",
+          "degree": "DDS",
+          "year": "2000-2004"
+        },
+        {
+          "university": "University of California, San Francisco",
+          "degree": "MSc (Oral Surgery)",
+          "year": "2004-2008"
+        }
+      ],
+      "awards": [
+        {
+          "title": "Excellence in Research Award",
+          "organization": "American Association of Oral and Maxillofacial Surgeons",
+          "year": "2010"
+        }
+      ]
+    },
+    "workAndExperience": {
+      "currentEmployment": [
+        {
+          "clinic": "Bright Smile Oral Surgery Center",
+          "position": "Chief Oral Surgeon",
+          "duration": "2012 - Present"
+        },
+        {
+          "clinic": "San Francisco General Hospital",
+          "position": "Oral Surgery Consultant",
+          "duration": "2008 - Present"
+        }
+      ],
+      "services": [
+        { "name": "Dental Implants", "price": "$1500" },
+        { "name": "Wisdom Teeth Removal", "price": "$500" }
+      ]
+    }
+  },
+
+  {
+    "profile": {
+      "name": "Dr. Anna Smith",
+      "image": "https://i.ibb.co/xz0tCc9/ban1.jpg",
+      "qualifications": "DMD, PhD (Orthodontics)",
+      "rating": 4.9,
+      "reviews": 120,
+      "servicesOffered": ["Braces", "Invisalign"]
+    },
+    "aboutMe": {
+      "bio": "",
+      "education": [
+        {
+          "university": "University of Pennsylvania School of Dental Medicine",
+          "degree": "DMD",
+          "year": "2005-2009"
+        },
+        {
+          "university": "University of Pennsylvania School of Dental Medicine",
+          "degree": "PhD (Orthodontics)",
+          "year": "2009-2013"
+        }
+      ],
+      "awards": [
+        {
+          "title": "Best Clinical Case Award",
+          "organization": "American Association of Orthodontists",
+          "year": "2015"
+        }
+      ]
+    },
+    "workAndExperience": {
+      "currentEmployment": [
+        {
+          "clinic": "Smile Zone Orthodontics",
+          "position": "Owner and Orthodontist",
+          "duration": "2014 - Present"
+        },
+        {
+          "clinic": "Penn Dental Medicine",
+          "position": "Adjunct Professor of Orthodontics",
+          "duration": "2013 - Present"
+        }
+      ],
+      "services": [
+        { "name": "Braces", "price": "$3000" },
+        { "name": "Invisalign", "price": "$4000" }
+      ]
+    }
+  }
+]
+
+
+
+
