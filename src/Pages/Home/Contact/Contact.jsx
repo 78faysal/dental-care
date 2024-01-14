@@ -18,7 +18,7 @@ const Contact = () => {
         </div>
         <div className="card shrink-0 w-full max-w-2xl text-white flex-1">
           <form className="card-body">
-            <div className="md:flex gap-5 justify-center">
+            {/* <div className="md:flex gap-5 justify-center"> */}
               <div className="form-control">
                 <label className="label">
                   <span className="label-text text-white">Name</span>
@@ -41,8 +41,19 @@ const Contact = () => {
                   required
                 />
               </div>
-            </div>
-            <div className="md:flex gap-5 justify-center">
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-white">Email</span>
+                </label>
+                <textarea
+                  type="message"
+                  placeholder="Your Message"
+                  className="input input-bordered text-black w-full h-28 pt-3"
+                  required
+                />
+              </div>
+            {/* </div> */}
+            {/* <div className="md:flex gap-5 justify-center">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text text-white">Number</span>
@@ -89,9 +100,9 @@ const Contact = () => {
                   required
                 />
               </div>
-            </div>
+            </div> */}
             <div className="form-control mt-6">
-              <button className="btn btn-primary w-[84%] mx-auto">Book Now</button>
+              <button className="btn btn-primary w-full mx-auto">Send Message</button>
             </div>
           </form>
         </div>
