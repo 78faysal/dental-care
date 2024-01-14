@@ -58,8 +58,21 @@ const Navbar = () => {
           className="dropdown-content z-[1] menu p-2 shadow bg-opacity-40 bg-black rounded-box w-52"
         >
           <li className="hover:bg-green-700  transition duration-300">
-            <Link to={`/dashboard/${isAdmin?.admin === true ? 'allUser' : 'myAppointments'}`}>Dashboard</Link>
-          </li>
+              <Link to={`/dashboard/${isAdmin?.admin === true ? 'allUser' : 'myAppointments'}`}>Dashboard</Link>
+            </li>
+          {/* {user && isAdmin?.admin === true ? (
+            <li className="hover:bg-green-700  transition duration-300">
+              <Link to={`/dashboard/allUser`}>Dashboard</Link>
+            </li>
+          ) : (
+            user ||
+            (!user && (
+              <li className="hover:bg-green-700  transition duration-300">
+                <Link to={`/dashboard/myAppointments`}>Dashboard</Link>
+              </li>
+            ))
+          )} */}
+
           {user ? (
             <li className="hover:bg-green-700  transition duration-300">
               <button onClick={handleLogOut} className=" pt-4">

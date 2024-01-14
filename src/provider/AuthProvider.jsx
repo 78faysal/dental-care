@@ -33,7 +33,7 @@ const AuthProvider = ({ children }) => {
 
   // update user
   const updateUser = (name, image) => {
-    setLoading(true);
+    // setLoading(true);
     return updateProfile(auth?.currentUser, {
       displayName: name,
       photoURL: image,
@@ -48,7 +48,7 @@ const AuthProvider = ({ children }) => {
 
   //log out user
   const logOut = () => {
-    setLoading(true);
+    // setLoading(true);
     return signOut(auth);
   };
 

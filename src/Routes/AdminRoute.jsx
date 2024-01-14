@@ -9,7 +9,7 @@ const AdminRoute = ({ children }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
-    console.log(isAdminLoading);
+    console.log(isAdminLoading, loading);
 
   //   TODO: isAdminLoading value change after data get
   if (loading || isAdminLoading) {
