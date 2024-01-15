@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import useAuth from "./useAuth";
 
 export const axiosSecure = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://dental-care-server-gamma.vercel.app",
 });
 
 const useAxiosSecure = () => {

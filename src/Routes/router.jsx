@@ -30,7 +30,7 @@ export const router = createBrowserRouter([
         },
         {
             path: '/doctorDetail/:id',
-            loader: ({params}) => fetch(`http://localhost:5000/doctors/${params.id}`),
+            loader: ({params}) => fetch(`https://dental-care-server-gamma.vercel.app/doctors/${params.id}`),
             element: <DoctorDetail />
         },
         {
