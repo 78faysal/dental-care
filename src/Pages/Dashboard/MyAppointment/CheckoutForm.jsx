@@ -4,7 +4,7 @@ import useAuth from "../../../Hooks/useAuth";
 import { axiosSecure } from "../../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 
-const CheckoutForm = ({ modalData, setPaymentInfo }) => {
+const CheckoutForm = ({ modalData, setPaymentInfo, refetch }) => {
   const stripe = useStripe();
   const elements = useElements();
   const { user } = useAuth();
@@ -22,6 +22,8 @@ const CheckoutForm = ({ modalData, setPaymentInfo }) => {
         setClientSecret(res.data.clientSecret);
       });
   }, [modalData]);
+
+  // console.log(modalData);
 
   const handleSubmit = async (event) => {
     // Block native form submission.
@@ -76,13 +78,20 @@ const CheckoutForm = ({ modalData, setPaymentInfo }) => {
 
     console.log("payment intent", paymentIntent);
     if (paymentIntent.id) {
-      Swal.fire({
-        position: "top",
-        icon: "success",
-        title: "Payment successful",
-        showConfirmButton: false,
-        timer: 1500,
-      });
+      axiosSecure
+        .patch(`/appointments/${modalData._id}`, { transId: paymentIntent.id })
+        .then((res) => {
+          if (res.data.matchedCount > 0) {
+            refetch();
+            Swal.fire({
+              position: "top",
+              icon: "success",
+              title: "Payment successful",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          }
+        });
     }
 
     if (paymentIntent.status === "succeeded") {
@@ -103,8 +112,6 @@ const CheckoutForm = ({ modalData, setPaymentInfo }) => {
       setProcessing(false);
       setPaymentInfo(paymentIntent);
     }
-
-    // console.log(clientSecret, processing, stripe);
   };
 
   return (

@@ -15,12 +15,12 @@ const MyAppointment = () => {
   const {
     data: appointments = [],
     isPending: appointmentLoading,
-    refetch,
+    refetch
   } = useQuery({
     queryKey: ["appointmenst", user?.email],
     queryFn: async () => {
       const res = await axiosSecure.get(`/appointments/${user?.email}`);
-      //   console.log(res.data);
+        // console.log(res.data);
       return res.data;
     },
   });
@@ -45,12 +45,15 @@ const MyAppointment = () => {
 
   const handlePay = (appointmentInfo) => {
     document.getElementById("my_modal_3").showModal();
+    // console.log(appointmentInfo);
     setModalData(appointmentInfo);
   };
 
-  if(paymentInfo.id){
-    refetch();
-  }
+  // if(paymentInfo.id){
+  //   refetch();
+  // }
+
+  // console.log(modalData);
 
   return (
     <div>
@@ -99,7 +102,7 @@ const MyAppointment = () => {
           <h2 className="text-xl font-bold text-center">
             {modalData?.treatment}
           </h2>
-          <CheckoutForm setPaymentInfo={setPaymentInfo} modalData={modalData} />
+          <CheckoutForm refetch={refetch} setPaymentInfo={setPaymentInfo} modalData={modalData} />
         </div>
       </dialog>
     </div>

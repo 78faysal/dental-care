@@ -2,9 +2,9 @@ const AppointmentItem = ({
   item,
   idx,
   handlePay,
-  paymentTransId: paymentId
+  // paymentId
 }) => {
-  console.log(paymentId);
+  // console.log(paymentId);
   return (
     <tr key={item._id}>
       <th>{idx + 1}</th>
@@ -14,11 +14,13 @@ const AppointmentItem = ({
       <td>{item.treatment}</td>
       <td>
         <button
+          disabled={item?.payment === 'done'}
           onClick={() => handlePay(item)}
-          className="btn bg-green-800 text-white"
+          className={`btn bg-green-800 text-white`}
         >
-          Pay
+          {item?.transactionId ? 'Paied' : "Pay"}
         </button>
+        {item?.transactionId && <p className="text-green-700">Trans Id: {item?.transactionId}</p>}
       </td>
     </tr>
   );

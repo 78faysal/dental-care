@@ -56,6 +56,7 @@ const AuthProvider = ({ children }) => {
     onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       console.log("Obserbing user", currentUser);
+      // setLoading(false);
       const userInfo = { email: currentUser?.email };
       if (currentUser) {
         axiosSecure

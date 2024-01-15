@@ -1,19 +1,21 @@
 import { FcGoogle } from "react-icons/fc";
 import useAuth from "../../../Hooks/useAuth";
-import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+// import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 
 
 const ContinueWith = () => {
     const {googleSignIn} = useAuth();
-    const axiosSecure = useAxiosSecure();
+    // const axiosSecure = useAxiosSecure();
+    const axiosPublic = useAxiosPublic();
     const navigate = useNavigate();
 
     const handleContinue = () => {
         googleSignIn()
         .then((res) => {
-            axiosSecure.patch("/users", { name: res.user.displayName, email: res.user.email, image: res.user.photoURL })
+            axiosPublic.patch("/users", { name: res.user.displayName, email: res.user.email, image: res.user.photoURL })
             .then((res) => {
                 console.log(res.data);
                 if (res.data.insertedId || res.data.matchedCount > 0) {
